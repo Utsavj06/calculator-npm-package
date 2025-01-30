@@ -28,7 +28,8 @@ body {
 input {
     padding: 5px 0;
     font-size: 30px;
-    width: 98%;
+    width: 100%;
+    text-align: end;
     border-radius: 10px;
     border: transparent;
 }
@@ -45,4 +46,9 @@ input {
     border-radius: 50%;
     height: 45px;
     border: transparent;
+}
+
+.clear{
+    width: 100%;
+    padding: 10px 0;
 }
