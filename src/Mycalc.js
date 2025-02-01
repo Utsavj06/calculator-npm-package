@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css'
 
 const buttons = ['1','2','3','4','5','6','7','8','9','+','0','-','*','/','=']
-const App = () => {
+const Mycalc = () => {
   const [numbers, setNumber] = useState('')
 
   const handleInputChange = (e) => {
@@ -19,7 +19,6 @@ const App = () => {
         setNumber(''); 
         break;
       default:
-        setPrevKey(input)
         setNumber((prev) => prev + input); 
         break;
     }
@@ -37,8 +36,9 @@ const App = () => {
         </div>
         <button className='clear' onClick={() => handleInputChange('C')}>Clear</button>
       </div>
+      <p>Copyright &copy; 2025 Utsav Jaiswal</p>
     </div>
   );
 };
 
-export default App;
+export default Mycalc;
