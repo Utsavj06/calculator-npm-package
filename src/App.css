@@ -12,8 +12,8 @@ body {
 }
 
 .calculator{
-    height: 500px;
-    width: 400px;
+    height: 400px;
+    width: 300px;
     background-color: rgb(199, 81, 81);
     margin: auto auto;
     display: block;
@@ -26,29 +26,30 @@ body {
 }
 
 input {
-    padding: 5px 0;
+    padding: 5px 10px;
     font-size: 30px;
     width: 100%;
     text-align: end;
     border-radius: 10px;
     border: transparent;
+    box-sizing: border-box;
 }
 
 .calc-btn{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 20px 5px;
+    padding: 20px 15px;
 }
 
 .calc-btn button{
-    margin: 10px 40px;
-    padding: 5px;
+    margin: 5px 20px;
+    padding: 2px;
     border-radius: 50%;
-    height: 45px;
+    height: 35px;
     border: transparent;
 }
 
 .clear{
     width: 100%;
-    padding: 10px 0;
+    padding: 5px 0;
 }

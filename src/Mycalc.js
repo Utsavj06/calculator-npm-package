@@ -6,7 +6,7 @@ const Mycalc = () => {
   const [numbers, setNumber] = useState('')
 
   const handleInputChange = (e) => {
-    const input = e.target.innerHTML
+    const input = e?.target?.innerHTML || e
     switch (input) {
       case '=':
         try {
