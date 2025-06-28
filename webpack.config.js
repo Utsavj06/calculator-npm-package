@@ -1,35 +1,32 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: path.join(__dirname, "src", "index.js"),
-    output: {
-      path:path.resolve(__dirname, "dist"),
+  entry: './src/Mycalc.js', // adjust if needed
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    library: {
+      type: 'commonjs2', // this ensures correct Node-style export
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, "public", "index.html"),
-      }),
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react'],
-                  },
-                },
-              },
-              {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-              },
-        ]
-      },
-  devServer: {
-    port: 3001,
   },
+  externals: {
+    react: 'react',
+    'react-dom': 'react-dom'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 };

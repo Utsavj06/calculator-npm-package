@@ -36,7 +36,7 @@ const Mycalc = () => {
         </div>
         <button className='clear' onClick={() => handleInputChange('C')}>Clear</button>
       </div>
-      <p>Copyright &copy; 2025 Utsav Jaiswal</p>
+      <p>Copyright &copy; {new Date().getFullYear()} Utsav Jaiswal</p>
     </div>
   );
 };
