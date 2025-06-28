@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/Mycalc.js', // adjust if needed
+  entry: './src/Index.js', // adjust if needed
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
